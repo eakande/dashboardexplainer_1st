@@ -21,7 +21,6 @@ from dash import Dash, callback, html, dcc, dash_table, Input, Output, State, MA
 
     
 #Import the Diabetes Dataset
-from sklearn.datasets import load_diabetes
 
 data=pd.read_csv('data_latest.csv')
 
