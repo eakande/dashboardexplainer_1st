@@ -244,5 +244,12 @@ from dash_bootstrap_components.themes import CYBORG,PULSE,DARKLY
 db=ExplainerDashboard(explainer, [CustomModelTab, CustomModelTab1, CustomPredictionsTab,
                                CustomPredictionsTab2, CustomPredictionsTab3, CustomPredictionsTab4], 
                         title='Macroeconomic Indicator Prediction for Nigeria', header_hide_selector=False,
-                        bootstrap=CYBORG).run()
+                        bootstrap=CYBORG)
+
+db.to_yaml("dashboard.yaml", explainerfile="explainer.joblib", dump_explainer=True)
+
+from explainerdashboard import ExplainerDashboard
+db = ExplainerDashboard.from_config("dashboard.yaml") 
+app = db.flask_server()
+
   

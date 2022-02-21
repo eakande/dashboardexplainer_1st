@@ -1,7 +1,7 @@
 dash>=2
 dash-bootstrap-components
 dash-auth
-explainerdashboard==0.3.7
+explainerdashboard
 gunicorn==20.1.0
 jupyter_dash
 dtreeviz>=1.1.4
